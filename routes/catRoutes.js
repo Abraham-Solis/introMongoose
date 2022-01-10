@@ -21,7 +21,7 @@ router.post('/cat', async function (req, res) {
 
 //PUT one cat by iD
 router.put('/cats:id', async function (req, res) {
-  await Cat.findByIdAndUpdates(req.params.id, req.body)
+  await Cat.findByIdAndUpdate(req.params.id, req.body)
   res.sendStatus(200)
 })
 

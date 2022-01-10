@@ -20,13 +20,13 @@ router.post('/birds', async function (req, res) {
 })
 
 //PUT one Dog by iD
-router.put('/birds:id', async function (req, res) {
-  await Bird.findByIdAndUpdates(req.params.id, req.body)
+router.put('/birds/:id', async function (req, res) {
+  await Bird.findByIdAndUpdate(req.params.id, req.body)
   res.sendStatus(200)
 })
 
 //DELETE one bird by id 
-router.delete('./birds/:id', async function (req, res) {
+router.delete('/birds/:id', async function (req, res) {
   await Bird.findByIdAndDelete(req.params.id)
   res.sendStatus(200)
 })
