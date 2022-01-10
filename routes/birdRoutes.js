@@ -4,7 +4,7 @@ const { Bird } = require('../models')
 
 // GET all Birds
 router.get('/birds', async function (req,res){
-  const birds = await Dog.find({})
+  const birds = await Bird.find({})
   res.json(birds)
 })
 

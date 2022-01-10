@@ -16,7 +16,7 @@ router.get('/cats/:id', async function (req, res) {
 
 //POST one cat
 router.post('/cat', async function (req, res) {
-  const bird = await Bird.create(req.body)
+  const cat = await Cat.create(req.body)
   res.json(cat)
 })
 
