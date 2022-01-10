@@ -12,6 +12,10 @@ const CatSchema = new Schema({
   breed: {
     type: String,
     required: true
+  }, 
+  owner: {
+    type: Schema.Types.ObjectId,
+    ref: 'owner'
   }
 })
 

@@ -1,6 +1,6 @@
-const {Shcema, model, Schema } = require('mongoose')
+const { Schema, model } = require('mongoose')
 
-const User = new Schema({
+const Owner = new Schema({
   name:{
     type: String,
     required:true
@@ -19,4 +19,4 @@ const User = new Schema({
   }]
 })
 
-module.exports = model('user', User)
+module.exports = model("owner", Owner)

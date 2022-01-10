@@ -1,21 +1,22 @@
 const router = require('express').Router()
-const { Bird } = require('../models')
+const { Bird, Owner } = require('../models')
 
 // GET all Birds
 router.get('/birds', async function (req, res) {
-  const birds = await Bird.find({}).populate('user')
+  const birds = await Bird.find({}).populate('owner')
   res.json(birds)
 })
 
 //GET one bird by iD
 router.get('/birds/:id', async function (req, res) {
-  const bird = await Bird.findById(req.params.id).populate('user')
+  const bird = await Bird.findById(req.params.id).populate('owner')
   res.json(bird)
 })
 
 //POST one bird
 router.post('/birds', async function (req, res) {
   const bird = await Bird.create(req.body)
+  await Owner.findByIdAndUpdate(req.body.user, { $push: { birds: bird._id } })
   res.json(bird)
 })
 
