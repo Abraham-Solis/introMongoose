@@ -1,5 +1,4 @@
-const require = require('expresss').Router()
-const { Router } = require('express')
+const router = require('express').Router()
 const { Cat } = require('../models')
 
 // GET all Cats

@@ -15,4 +15,4 @@ const BirdSchema = new Schema({
   }
 })
 
-model.exports = model('bird', BirdSchema)
+module.exports = model('bird', BirdSchema)
