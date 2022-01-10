@@ -6,48 +6,48 @@ const { Schema, model } = require('mongoose')
 //Bird Schema
 
 
-const BirdSchema = new Schema({
-  name: String,
-  age: Number,
-  breed: String,
+// const BirdSchema = new Schema({
+//   name: String,
+//   age: Number,
+//   breed: String,
 
-})
+// })
 
-const Bird = model('bird', BirdSchema)
+// const Bird = model('bird', BirdSchema)
 
-Bird.create({
-  name: 'Chirpy',
-  age: 3,
-  breed: 'Humming Bird',
-})
+// Bird.create({
+//   name: 'Chirpy',
+//   age: 3,
+//   breed: 'Humming Bird',
+// })
 
-  .then(bird => console.log(bird))
-  .catch(err => console.log(err))
+//   .then(bird => console.log(bird))
+//   .catch(err => console.log(err))
 
 
 //Cat Scheema
 
 
-const CatSchema = new Schema({
-  name: String,
-  age: Number,
-  breed: String,
+// const CatSchema = new Schema({
+//   name: String,
+//   age: Number,
+//   breed: String,
 
-})
+// })
 
 
-const Cat = model('cat', CatSchema)
+// const Cat = model('cat', CatSchema)
 
-Cat.create({
-  name: 'Chowder',
-  age: 5,
-  breed: 'Munchikin',
-},
-  {
-    name: 'Tarzan',
-    age: 2,
-    breed: 'Orange Tabi'
-  })
+// Cat.create({
+//   name: 'Chowder',
+//   age: 5,
+//   breed: 'Munchikin',
+// },
+//   {
+//     name: 'Tarzan',
+//     age: 2,
+//     breed: 'Orange Tabi'
+//   })
 
-  .then(cat => console.log(cat))
-  .catch(err => console.log(err))
+//   .then(cat => console.log(cat))
+//   .catch(err => console.log(err))
