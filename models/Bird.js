@@ -15,7 +15,8 @@ const BirdSchema = new Schema({
   },
   owner: {
     type: Schema.Types.ObjectId,
-    ref: 'owner'
+    ref: 'owner',
+    required:true
   }
 })
 
