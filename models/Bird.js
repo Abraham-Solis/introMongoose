@@ -14,3 +14,5 @@ const BirdSchema = new Schema({
     required: true
   }
 })
+
+model.exports = model('bird', BirdSchema)
