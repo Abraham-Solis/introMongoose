@@ -21,7 +21,7 @@ router.post('/birds', async function (req,res){
 })
 
 //PUT one Dog by iD
-router.put('/birds:id', astbc function (req,res){
+router.put('/birds:id', async function (req,res){
   await Bird.findByIdAndUpdates(req.params.id, req.body)
   res.sendStatus(200)
 })
