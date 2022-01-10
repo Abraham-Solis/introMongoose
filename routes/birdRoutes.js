@@ -3,13 +3,13 @@ const { Bird } = require('../models')
 
 // GET all Birds
 router.get('/birds', async function (req, res) {
-  const birds = await Bird.find({})
+  const birds = await Bird.find({}).populate('user')
   res.json(birds)
 })
 
 //GET one bird by iD
 router.get('/birds/:id', async function (req, res) {
-  const bird = await Bird.findById(req.params.id)
+  const bird = await Bird.findById(req.params.id).populate('user')
   res.json(bird)
 })
 

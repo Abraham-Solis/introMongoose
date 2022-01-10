@@ -1,4 +1,4 @@
-const {Shcema, model } = require('mongoose')
+const {Shcema, model, Schema } = require('mongoose')
 
 const User = new Schema({
   name:{
@@ -9,8 +9,14 @@ const User = new Schema({
     type:String,
     required:true
   },
-  biird:[{
+  birds:[{
     type:Schema.Types.ObjectId,
-    ref:'dog'
+    ref:'bird'
+  }],
+  cats:[{
+    type: Schema.Types.ObjectId,
+    ref:'cat'
   }]
 })
+
+module.exports = model('user', User)
